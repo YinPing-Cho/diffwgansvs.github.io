@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Audio Samples from "Mandarin Singing Voice Synthesis with Denoising Diffusion Probabilistic Wasserstein GAN"</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class='section'>
+        <h1>Audio Samples from "Mandarin Singing Voice Synthesis with Denoising Diffusion Probabilistic Wasserstein GAN"</h1>
+        <p><b>Abstract:</b> Singing voice synthesis (SVS) is the computer production of a human-like singing voice from given musical scores. 
+            To accomplish end-to-end SVS effectively and efficiently, this work adopts the acoustic model-neural vocoder architecture established for high-quality speech and singing voice synthesis. 
+            Specifically, this work aims to pursue a higher level of expressiveness in synthesized voices by combining the diffusion denoising probabilistic model (DDPM) and Wasserstein generative adversarial network (WGAN) to construct the backbone of the acoustic model. 
+            On top of the proposed acoustic model, a HiFiGAN neural vocoder is adopted with integrated fine-tuning to ensure optimal synthesis quality for the resulting end-to-end SVS system. 
+            This end-to-end system was evaluated with the multi-singer Mpop600 Mandarin singing voice dataset. 
+            In the experiments, the proposed system exhibits improvements over previous landmark counterparts in terms of musical expressiveness and high-frequency acoustic details. 
+            Moreover, the adversarial acoustic model converged stably without the need of enforcing reconstruction objectives, which shows the convergence stability of the proposed DDPM and WGAN combined architecture over alternative GAN-based SVS systems.</i>.</p>
+
+        <h4>Contents:</h4>
+        <p>
+        <ul class='toc'>
+            <li><a href='#section-1'>Samples synthesized by different systems</a></li>
+            <li><a href='#section-2'>Same musical score, different singer vector</a></li>
+        </ul>
+        </p>
+
+        <h4>Notes:</h4>
+        <p>
+        <ul>
+            <li>All the models were trained on the <a href="https://ieeexplore.ieee.org/document/9306461">Mpop600</a> dataset.</li>
+            <li>The sample rate of all the audio samples is 22050Hz</li>
+        </ul>
+        </p>
+    </div>
+
+    <hr>
+
+
+    <div id='section-1' class='section'>
+        <h2>Samples synthesized by different systems</h2>
+        <p>One musical score segment was sampled from each of Mpop600's two female and two male singers' testing data.</p>
+
+        <h3>Female1 Sample</h3>
+        <div class='playlist'>
+            <div class='labeled-audio'><p class='text'>Reference Audio</p>
+                <audio preload='metadata' controls><source src='samples/ref/0_latest18_singer_ref.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>HiFiGAN Resynthesized</p>
+                <audio preload='metadata' controls><source src='samples/resynth/0_latest18_recon.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-FFT</p>
+                <audio preload='metadata' controls><source src='samples/fft/0_latest18_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-L1</p>
+                <audio preload='metadata' controls><source src='samples/l1/0_latest18_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-Mixed</p>
+                <audio preload='metadata' controls><source src='samples/mix/0_latest18_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-WGAN</p>
+                <audio preload='metadata' controls><source src='samples/wgan/0_latest18_synth.wav' type='audio/wav'></audio></div>
+        </div>
+
+        <h3>Female2 Sample</h3>
+        <div class='playlist'>
+            <div class='labeled-audio'><p class='text'>Reference Audio</p>
+                <audio preload='metadata' controls><source src='samples/ref/0_latest20_singer_ref.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>HiFiGAN Resynthesized</p>
+                <audio preload='metadata' controls><source src='samples/resynth/0_latest20_recon.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-FFT</p>
+                <audio preload='metadata' controls><source src='samples/fft/0_latest20_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-L1</p>
+                <audio preload='metadata' controls><source src='samples/l1/0_latest20_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-Mixed</p>
+                <audio preload='metadata' controls><source src='samples/mix/0_latest20_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-WGAN</p>
+                <audio preload='metadata' controls><source src='samples/wgan/0_latest20_synth.wav' type='audio/wav'></audio></div>
+        </div>
+
+        <h3>Male1 Sample</h3>
+        <div class='playlist'>
+            <div class='labeled-audio'><p class='text'>Reference Audio</p>
+                <audio preload='metadata' controls><source src='samples/ref/0_latest42_singer_ref.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>HiFiGAN Resynthesized</p>
+                <audio preload='metadata' controls><source src='samples/resynth/0_latest42_recon.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-FFT</p>
+                <audio preload='metadata' controls><source src='samples/fft/0_latest42_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-L1</p>
+                <audio preload='metadata' controls><source src='samples/l1/0_latest42_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-Mixed</p>
+                <audio preload='metadata' controls><source src='samples/mix/0_latest42_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-WGAN</p>
+                <audio preload='metadata' controls><source src='samples/wgan/0_latest42_synth.wav' type='audio/wav'></audio></div>
+        </div>
+
+        <h3>Male2 Sample</h3>
+        <div class='playlist'>
+            <div class='labeled-audio'><p class='text'>Reference Audio</p>
+                <audio preload='metadata' controls><source src='samples/ref/0_latest77_singer_ref.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>HiFiGAN Resynthesized</p>
+                <audio preload='metadata' controls><source src='samples/resynth/0_latest77_recon.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-FFT</p>
+                <audio preload='metadata' controls><source src='samples/fft/0_latest77_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-L1</p>
+                <audio preload='metadata' controls><source src='samples/l1/0_latest77_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-Mixed</p>
+                <audio preload='metadata' controls><source src='samples/mix/0_latest77_synth.wav' type='audio/wav'></audio></div>
+            <div class='labeled-audio'><p class='text'>Model-Diff-WGAN</p>
+                <audio preload='metadata' controls><source src='samples/wgan/0_latest77_synth.wav' type='audio/wav'></audio></div>
+        </div>
+    </div>
+
+    <hr>
+    <div id='section-2' class='section'>
+        <h2>Same musical score, different singer vector</h2>
+        <p>Two musical score segments were sampled from one female and one male singer.  
+            In synthesis, each model was given the same musical score segment but with different singer identity vectors to test the multi-singer synthesis capability.  
+            Please notice that no pitch-range adjustment was done on the input musical scores.</p>
+        
+        <div id='section-2-1' class='section2'>
+            <h3>Sample1 original singer reference:</h3>
+            <div class='labeled-audio2'>
+                <audio preload='metadata' controls><source src='samples/cross_45/45_singer_ref.wav' type='audio/wav'></audio></div>
+            <h5>Synthesized by Model-Diff-L1</h5>
+            <div class='playlist'>
+                <div class='labeled-audio2'><p class='text'>with Female1 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_45/l1/f1_latest45_synth.wav' type='audio/wav'></audio></div>
+                <div class='labeled-audio2'><p class='text'>with Female2 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_45/l1/f2_latest45_synth.wav' type='audio/wav'></audio></div>
+
+                <div class="container"></div>
+                    <div class='labeled-audio2'><p class='text'>with Male1 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_45/l1/m1_latest45_synth.wav' type='audio/wav'></audio></div>
+                    <div class='labeled-audio2'><p class='text'>with Male2 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_45/l1/m2_latest45_synth.wav' type='audio/wav'></audio></div>
+                </div>
+
+            <h5>Synthesized by Model-Diff-WGAN</h5>
+            <div class='playlist'>
+                <div class='labeled-audio2'><p class='text'>with Female1 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_45/wgan/f1_latest45_synth.wav' type='audio/wav'></audio></div>
+                <div class='labeled-audio2'><p class='text'>with Female2 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_45/wgan/f2_latest45_synth.wav' type='audio/wav'></audio></div>
+
+                <div class="container"></div>
+                    <div class='labeled-audio2'><p class='text'>with Male1 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_45/wgan/m1_latest45_synth.wav' type='audio/wav'></audio></div>
+                    <div class='labeled-audio2'><p class='text'>with Male2 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_45/wgan/m2_latest45_synth.wav' type='audio/wav'></audio></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id='section-2-2' class='section2'>
+            <h3>Sample2 original singer reference:</h3>
+            <div class='labeled-audio2'>
+                <audio preload='metadata' controls><source src='samples/cross_14/14_singer_ref.wav' type='audio/wav'></audio></div>
+            <h5>Synthesized by Model-Diff-L1</h5>
+            <div class='playlist'>
+                <div class='labeled-audio2'><p class='text'>with Female1 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_14/l1/f1_latest14_synth.wav' type='audio/wav'></audio></div>
+                <div class='labeled-audio2'><p class='text'>with Female2 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_14/l1/f2_latest14_synth.wav' type='audio/wav'></audio></div>
+
+                <div class="container"></div>
+                    <div class='labeled-audio2'><p class='text'>with Male1 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_14/l1/m1_latest14_synth.wav' type='audio/wav'></audio></div>
+                    <div class='labeled-audio2'><p class='text'>with Male2 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_14/l1/m2_latest14_synth.wav' type='audio/wav'></audio></div>
+                </div>
+
+            <h5>Synthesized by Model-Diff-WGAN</h5>
+            <div class='playlist'>
+                <div class='labeled-audio2'><p class='text'>with Female1 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_14/wgan/f1_latest14_synth.wav' type='audio/wav'></audio></div>
+                <div class='labeled-audio2'><p class='text'>with Female2 singer vector</p>
+                    <audio preload='metadata' controls><source src='samples/cross_14/wgan/f2_latest14_synth.wav' type='audio/wav'></audio></div>
+
+                <div class="container"></div>
+                    <div class='labeled-audio2'><p class='text'>with Male1 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_14/wgan/m1_latest14_synth.wav' type='audio/wav'></audio></div>
+                    <div class='labeled-audio2'><p class='text'>with Male2 singer vector</p>
+                        <audio preload='metadata' controls><source src='samples/cross_14/wgan/m2_latest14_synth.wav' type='audio/wav'></audio></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+</body>
+</html>
+
+<script>
+document
+    .getElementById('select-speaker')
+    .addEventListener('change', function () {
+        'use strict';
+        var targets = document.getElementsByClassName("select-speaker")
+        for (let i = 0; i < targets.length; i++) {
+            name = "samples/mp3/ted_speakers/" + this.value + "/sample-" + i.toString() + ".mp3"
+            targets[i].setAttribute("src", name)
+            targets[i].parentElement.load()
+        }
+});
+</script>
